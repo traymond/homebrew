@@ -32,7 +32,6 @@ class Abyss < Formula
     args = [
       '--disable-dependency-tracking',
       "--prefix=#{prefix}"]
-    args << '--disable-popcnt' if build.include? 'disable-popcnt'
     MAXK.each do |k|
       args << "--enable-maxk=#{k}" if build.include? "enable-maxk=#{k}"
     end
